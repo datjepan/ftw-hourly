@@ -17,10 +17,56 @@ https://github.com/sharetribe/flex-template-web/
 
 ## Upcoming version 2020-XX-XX
 
+## [v6.3.0] 2020-03-16
+
+This is update from from [upstream](https://github.com/sharetribe/ftw-daily): v4.3.0
+
+- [change] Redirect user back to Stripe during Connect Onboarding Flow when user is returned to
+  failure URL provided that the Account Link generation is successful.
+  [#1269](https://github.com/sharetribe/ftw-daily/pull/1269)
+- [fix] Don't flash listing closed text on mobile view of `BookingPanel` when the listing data is
+  not loaded yet. Instead, check that text is shown only for closed listings.
+  [#1268](https://github.com/sharetribe/ftw-daily/pull/1268)
+- [change] Use some default values to improve Stripe Connect onboarding. When creating a new Stripe
+  the account we will pass the account type, business URL and MCC to Stripe in order to avoid a
+  couple of steps in Connect Onboarding. We will also pass `tos_shown_and_accepted` flag. This PR
+  will bring back the previously used `accountToken` which is now used for passing e.g. the account
+  type to Stripe. [#1267](https://github.com/sharetribe/ftw-daily/pull/1267)
+- [change] Update `Modal` component to have option to use `Portal` with `usePortal` flag. Keep also
+  possibility to use modals without Portal because of `ModalInMobile` component.
+  [#1258](https://github.com/sharetribe/ftw-daily/pull/1258)
+
+[v6.3.0]: https://github.com/sharetribe/ftw-hourly/compare/v6.2.0...v6.3.0
+
+## [v6.2.0] 2020-02-18
+
+This is update from from [upstream](https://github.com/sharetribe/ftw-daily): v4.2.0
+
+- [add] Show a banner when a user is logged in with limited access.
+  [#1259](https://github.com/sharetribe/ftw-daily/pull/1259)
+  [#1261](https://github.com/sharetribe/ftw-daily/pull/1261)
+- [add] Support for logging in as a user from Console.
+  [#1254](https://github.com/sharetribe/ftw-daily/pull/1254)
+- [change] Add `handlebars` 4.5.3 and `serialize-javascript` 2.1.1 to resolutions in `package.json`.
+  [#1251](https://github.com/sharetribe/ftw-daily/pull/1251)
+
+[v6.2.0]: https://github.com/sharetribe/ftw-hourly/compare/v6.1.0...v6.2.0
+
+## [v6.1.0] 2020-02-03
+
+Update from upstream (first 3 bullets) and a couple of pending changes.
+
+- [fix] PaymentMethodsForm: remove unused 'invalid' prop that breaks some versions of Final Form
+  [#1255](https://github.com/sharetribe/ftw-daily/pull/1255)
+- [fix] Fix `console.warn` functions. [#1252](https://github.com/sharetribe/ftw-daily/pull/1252)
+- [add] Add missing countries (e.g. MX and JP) to `StripeBankAccountTokenInput` validations.
+  [#1250](https://github.com/sharetribe/ftw-daily/pull/1250)
 - [add] Add French and Spanish translations for yogatime
   [#72](https://github.com/sharetribe/ftw-hourly/pull/72)
 - [fix] Fix bug in showing availability exceptions. This bug was introduced in v6.0.0.
   [#71](https://github.com/sharetribe/ftw-hourly/pull/71)
+
+[v6.1.0]: https://github.com/sharetribe/ftw-hourly/compare/v6.0.0...v6.1.0
 
 ## [v6.0.0] 2019-12-20
 
